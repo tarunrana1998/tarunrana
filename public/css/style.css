@@ -1,0 +1,147 @@
+
+/* importing Roboto Font */
+@import url(./fonts.css);
+
+
+.nav-link {
+    font-size: large;
+    font-family: ;
+    font: italic;
+    margin-right: 40px;
+
+}
+
+/* Banner Starting Area  */
+.col-1 {
+    padding-top: 150px;
+}
+
+.col-2 {
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 5rem;
+    font: bold;
+}
+.site-banner.btn {
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+h4 {
+
+}
+
+.cv-button {
+    margin-top: 50px;
+}
+.hire-button {
+    margin-right: 50px;
+    margin-left:50px ;
+}
+/* Banner Ending Area  */
+
+/* About Starting  Area  */
+
+.about-para {
+    margin-top: 100px;
+    text-align: center;
+    font : bold;
+    font-size: 45px;
+}
+
+.about-area {
+    padding-top: 7rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.space_text {
+    padding-bottom: 20px;
+}
+
+/* About Ending Area  */
+
+/* Services Starting  Area  */
+
+.services-area {
+    padding: 7rem 2rem;
+}
+
+.services {
+    background-color: #b8dbd2;
+    margin-right: 10px;
+    padding: 0.5rem;
+    min-height: 320px;
+
+}
+
+.services-title {
+    font-size: 45px;
+}
+
+.services:hover {
+    box-shadow: 5px 10px 18px #888888;
+    transform: scale(1.2);
+    background-color: #e1f9fa;
+
+}
+.services-list {
+    padding : 3rem;
+
+}
+
+/* Services Ending  Area  */
+
+
+/* Education Starting  Area  */
+
+.education-items {
+    padding-top: 20px;
+    background-color: #b8dbd2;
+    padding-left:50px;
+    padding-right: 100px;
+
+}
+
+.education-title {
+    font-size: 45px;
+}
+
+.education-items:hover {
+    transform: scale(1.1);
+    background-color: #e1f9fa;
+    box-shadow: 5px 10px 18px #888888;
+
+}
+
+.institute-color {
+    color: gray;
+}
+
+
+/* Education Ending  Area  */
+
+/* Certification Starting  Area  */
+
+.certification-title {
+    padding-top : 7rem;
+    padding-bottom: 2rem;
+    font:45px;
+}
+.table-heading {
+    font-size: 30px;
+}
+
+/* certification Ending  Area  */
+
+
+/* Footer Start  */
+.gap {
+    padding:10px;
+}
+
+.site-logo {
+    padding:25px;
+}
+/* Footer End  */
