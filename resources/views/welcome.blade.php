@@ -29,7 +29,7 @@
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light bg-light ">
 
-                <a class="navbar-brand bg-light" href="#"><img src="./images/logo.png" alt="logo"
+                <a class="navbar-brand bg-light" href="#"><img src="{{ asset('images/logo.png') }}" alt="logo"
                         style="height:100px ;"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -163,7 +163,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 services-back">
                         <div class="services">
                             <div class="services-img text-center py-4">
-                                <img src="./images/services/web.png" alt="web-development">
+                                <img src="{{ asset('images/services/web.png') }}" alt="web-development">
                             </div>
                             <div class="card-body text-center">
                                 <h3 class="card-title">Web Developer</h3>
@@ -177,7 +177,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 services-back">
                         <div class="services">
                             <div class="services-img text-center py-4">
-                                <img src="./images/services/android1.png" alt="android-development">
+                                <img src="{{ asset('images/services/android1.png') }}" alt="android-development">
                             </div>
                             <div class="card-body text-center">
                                 <h3 class="card-title">Android Developer</h3>
@@ -194,7 +194,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 services-back">
                         <div class="services">
                             <div class="services-img text-center py-4">
-                                <img src="./images/services/cloud.png" alt="cloud-computing">
+                                <img src="{{ asset('images/services/cloud.png') }}" alt="cloud-computing">
                             </div>
                             <div class="card-body text-center">
                                 <h3 class="card-title">Cloud Computing</h3>
@@ -207,7 +207,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 services-back">
                         <div class="services">
                             <div class="services-img text-center py-4">
-                                <img src="./images/services/programming.png" alt="competitive-programming">
+                                <img src="{{ asset('images/services/programming.png') }}" alt="competitive-programming">
                             </div>
                             <div class="card-body text-center">
                                 <h3 class="card-title">Competitive Programming</h3>
@@ -358,20 +358,18 @@
     <footer id="contact" class="footer-area">
         <div class="container">
             <div class="site-logo text-center">
-                <a href="#"><img src="./images/logo.png" alt="site-logo"> </a>
+                <a href="#"><img src="{{ asset('images/logo.png') }}" alt="site-logo"> </a>
             </div>
         </div>
         <div class="social text-center">
             <h5 class="text-uppercase">FOLLOW ME</h5>
-            <p> <img src="./images/follow/envelope.png" alt="email-logo"> tarunrana1997@gmail.com</p>
-            <a class="gap" href="https://www.facebook.com/mahakal.ka.bhaakt/" target="_blank"><img
-                    src="./images/follow/facebook.png" alt="facebook-logo"></a>
+            <p> <img src="{{ asset('images/follow/envelope.png') }}" alt="email-logo"> tarunrana1997@gmail.com</p>
             <a class="gap" href="https://www.linkedin.com/in/tarunrana1998/" target="_blank"><img
-                    src="./images/follow/linkedin.png" alt="linkedin-logo"></a>
+                    src="{{ asset('images/follow/linkedin.png') }}" alt="linkedin-logo"></a>
             <a class="gap"href="https://twitter.com/tarun_rana54" target="_blank"><img
-                    src="./images/follow/twitter.png" alt="twitter-logo"></a>
+                    src="{{ asset('images/follow/twitter.png') }}" alt="twitter-logo"></a>
             <a class="gap" href="https://www.hackerrank.com/tarunrana1998" target="_blank"><img
-                    src="./images/follow/hackerrank.png" alt="hackerrank-logo"></a>
+                    src="{{ asset('images/follow/hackerrank.png') }}" alt="hackerrank-logo"></a>
         </div>
     </footer>
 
