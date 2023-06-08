@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 ">
-                    <img src="./images/banner/banner-image.png" class="img-fluid" alt="logo">
+                    <img src="{{ asset('images/banner/banner-image.png') }}" class="img-fluid" alt="logo">
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-image">
-                        <img src="./images/about-us.png" alt="About me" class="img-fluid">
+                        <img src="{{ asset('images/about-us.png') }}" alt="About me" class="img-fluid">
                     </div>
 
                 </div>
@@ -240,7 +240,7 @@
                 <div class="col-lg-9 col-md-4 col-sm-2 text-left">
                     <h3>[ B.Tech ]</h3>
                     <br>
-                    <h6 class="institute-color"><img src="./images/university.png" alt="college logo"> JSS Academy Of
+                    <h6 class="institute-color"><img src="{{ asset('images/university.png') }}" alt="college logo"> JSS Academy Of
                         Technical Education , Noida</h6>
                 </div>
                 <div class="col-lg-3 col-md-2 col-sm-1 text-right">
@@ -257,7 +257,7 @@
                 <div class="col-lg-9 col-md-4 col-sm-2 text-left">
                     <h3>[ Intermediate ]</h3>
                     <br>
-                    <h6 class="institute-color"><img src="./images/university.png" alt="college logo"> ST. Mary's
+                    <h6 class="institute-color"><img src="{{ asset('images/university.png') }}" alt="college logo"> ST. Mary's
                         Convent Senior Secondary School , Gajraula</h6>
                 </div>
                 <div class="col-lg-3 col-md-2 col-sm-1 text-right">
@@ -274,7 +274,7 @@
                 <div class="col-lg-9 col-md-4 col-sm-2 text-left">
                     <h3>[ High School ]</h3>
                     <br>
-                    <h6 class="institute-color"><img src="./images/university.png" alt="college logo"> ST. Mary's
+                    <h6 class="institute-color"><img src="{{ asset('images/university.png') }}" alt="college logo"> ST. Mary's
                         Convent Senior Secondary School , Gajraula</h6>
                 </div>
                 <div class="col-lg-3 col-md-2 col-sm-1 text-right">
