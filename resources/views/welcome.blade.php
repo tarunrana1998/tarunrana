@@ -5,7 +5,20 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    @if (env('APP_ENV') != 'local')
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HTBGZKW5KJ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-HTBGZKW5KJ');
+        </script>
+    @endif
     <!-- font awesome icons -->
     <link rel="stylesheet" href="./css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -70,7 +83,8 @@
                 <h1 class="display-5 fw-bold mb-3">I am Tarun Rana</h1>
                 <h4 class="text-primary mb-4">FULL STACK DEVELOPER</h4>
                 <div class="d-flex flex-column flex-md-row">
-                    <a class="btn btn-primary" target="_blank" href="https://www.linkedin.com/in/tarunrana1998/">HIRE ME</a>
+                    <a class="btn btn-primary" target="_blank" href="https://www.linkedin.com/in/tarunrana1998/">HIRE
+                        ME</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 text-center">
