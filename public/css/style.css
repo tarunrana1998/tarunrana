@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 .navbar {
     backdrop-filter: blur(10px); /* glass effect */
     background: rgba(255, 255, 255, 0.9);
