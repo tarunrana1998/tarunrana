@@ -70,9 +70,24 @@
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
-    <!-- Bootstrap Bundle JS (Async Loading) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
+    <style>
+        body { background: linear-gradient(120deg, #181c24 0%, #23283b 100%) !important; color: var(--text-color); }
+        .glass-section, .container, .card, .service-card, .project-card, .cert-card, .edu-card, .timeline-item, .timeline-area, .education-area, .services-area {
+            background: var(--glass-bg) !important;
+            color: var(--text-color) !important;
+            border-radius: 1rem;
+            box-shadow: var(--glass-shadow);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+        }
+        .bg-light, .bg-white, .bg-gradient, .shadow-sm, .shadow-lg, .rounded-4, .rounded-3 { background: none !important; box-shadow: none !important; }
+        .text-dark, .text-secondary, .lead, .timeline-title, .timeline-description p, .fw-bold, .fw-semibold, .display-5, .display-6, .display-3, .timeline-date, .timeline-title, .cert-title, .cert-description, .project-title, .project-description, .service-card h5, .service-card p, .edu-card, .edu-card p, .edu-card h5, .edu-card h3, .edu-card h4, .edu-card h6 { color: var(--text-color) !important; }
+        .text-primary { color: var(--accent-color) !important; }
+        .btn-outline-primary { border-color: var(--accent-color) !important; color: var(--accent-color) !important; background: transparent !important; }
+        .btn-outline-primary:hover { background: var(--accent-color) !important; color: #fff !important; }
+        .footer-area, .bg-dark, .bg-black { background: #181c24 !important; color: var(--text-color) !important; }
+    </style>
 </head>
 
 
@@ -87,7 +102,7 @@
         <!-- =======================================Start Header Area =========================================-->
 
         <header class="header-area">
-            <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 rounded-3 position-sticky top-0 z-3">
+            <nav class="navbar navbar-expand-lg glass py-3 rounded-3 position-sticky top-0 z-3">
                 <div class="container">
                     <a class="navbar-brand d-flex align-items-center" href="#">
                         <img src="{{ asset('images/logo.png') }}" alt="Tarun's Logo" class="img-fluid me-2" style="height: 70px;">
@@ -128,7 +143,7 @@
 
 
 
-        <section id="home" class="site-banner py-5 bg-light d-flex align-items-center">
+        <section id="home" class="site-banner py-5 d-flex align-items-center">
             <div class="container">
                 <div class="row align-items-center">
 
@@ -204,8 +219,8 @@
 
 
 
-        <section id="timeline" class="timeline-area bg-light py-5 min-vh-100">
-            <div class="container bg-white rounded-4 shadow-sm p-4">
+        <section id="timeline" class="timeline-area glass-section py-5 min-vh-100">
+            <div class="container glass p-4">
 
                 <div class="row">
                     <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
@@ -266,8 +281,8 @@
             </div>
         </section>
 
-        <section id="services" class="services-area bg-light py-5 min-vh-100 d-flex align-items-center">
-            <div class="container bg-white rounded-4 shadow-sm p-5">
+        <section id="services" class="services-area glass-section py-5 min-vh-100 d-flex align-items-center">
+            <div class="container glass p-5">
 
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="display-5 fw-bold text-primary">Services Area</h2>
@@ -329,8 +344,8 @@
         </section>
 
 
-        <section id="education" class=" bg-light py-5 min-vh-100">
-            <div class="container bg-white rounded-4 shadow-sm p-4">
+        <section id="education" class="glass-section py-5 min-vh-100">
+            <div class="container glass p-4">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="display-5 fw-bold text-primary">Education</h2>
                     <p class="lead text-muted">
@@ -395,7 +410,7 @@
         </section>
 
 
-        <section id="projects" class="projects-area bg-light py-5 min-vh-100 d-flex align-items-center">
+        <section id="projects" class="projects-area glass-section py-5 min-vh-100 d-flex align-items-center">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="display-5 fw-bold text-primary">Projects</h2>
@@ -408,7 +423,7 @@
                 <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
                     @foreach ($projects as $project)
                     <div class="col-lg-6">
-                        <div class="card shadow-lg h-100 rounded-4 overflow-hidden project-card">
+                        <div class="card project-card glass shadow-lg h-100 rounded-4 overflow-hidden">
                             <div class="position-relative">
                                 <img src="{{ $project->image }}" alt="{{ $project->title }}" class="img-fluid rounded-top-4 project-image" style=" object-fit: cover;">
                             </div>
@@ -436,7 +451,7 @@
             </div>
         </section>
 
-        <section id="github-stats" class="py-5 bg-light">
+        <section id="github-stats" class="py-5 glass-section">
             <div class="container text-center">
                 <h2 class="mb-4 fw-bold text-primary">GitHub Stats</h2>
 
@@ -457,8 +472,8 @@
         </section>
 
 
-        <section id="skills" class="py-5 bg-light min-vh-100 d-flex align-items-center">
-            <div class="container text-center mb-5 bg-white rounded-4 shadow-sm p-4">
+        <section id="skills" class="py-5 glass-section min-vh-100 d-flex align-items-center">
+            <div class="container text-center mb-5 glass p-4">
                 <h2 class="display-5 fw-bold text-primary">Skills</h2>
                 <p class="lead text-muted">I am proficient in various programming languages, frameworks, tools, and
                     technologies. Here are a few of them:</p>
@@ -510,8 +525,8 @@
         </section>
 
 
-        <section id="certification" class="certification-area py-5 bg-light min-vh-100">
-            <div class="container bg-white rounded-4 shadow-sm p-4">
+        <section id="certification" class="certification-area py-5 glass-section min-vh-100">
+            <div class="container glass p-4">
                 <div class="text-center">
                     <h2 class="display-5 fw-bold text-primary">Certifications</h2>
                     <p class="lead">Below are some of the certifications I have earned over the years in various areas
@@ -522,7 +537,7 @@
                 <div class="row g-4">
                     @foreach ($certifications as $certification)
                     <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
-                        <div class="cert-card shadow rounded-3 h-100 d-flex flex-column hover-effect bg-light bg-gradient">
+                        <div class="cert-card glass shadow rounded-3 h-100 d-flex flex-column hover-effect">
                             <div class="cert-img-container">
                                 <img src="{{ asset($certification->image) }}" alt="{{ $certification->title }}" class="img-fluid cert-img">
                             </div>
@@ -537,6 +552,51 @@
             </div>
 
 
+        </section>
+
+        <section id="hire-me" class="py-5 glass-section min-vh-100 d-flex align-items-center">
+            <div class="container glass p-4">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary">Hire Me</h2>
+                    <p class="lead text-muted">Interested in working together? Submit your offer below for a full-time or part-time position!</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <form action="#" method="POST" class="p-4 rounded-4 shadow glass-section">
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="company" name="company" placeholder="Enter your company name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">Company Location</label>
+                                <input type="text" class="form-control" id="location" name="location" placeholder="Enter company location" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="quote" class="form-label">Quote Price (in USD)</label>
+                                <input type="number" class="form-control" id="quote" name="quote" placeholder="Enter your offer price" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Position Type</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="position_type" id="fulltime" value="Full Time" required>
+                                    <label class="form-check-label" for="fulltime">Full Time</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="position_type" id="parttime" value="Part Time" required>
+                                    <label class="form-check-label" for="parttime">Part Time</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Additional Message (optional)</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Add any details or questions..."></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg rounded-pill">Send Offer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
 
         {{-- <section id="contact" class="py-5 bg-light">
@@ -577,7 +637,7 @@
         </section> --}}
 
 
-        <footer id="contact" class="footer-area bg-dark text-white">
+        <footer id="contact" class="footer-area bg-dark text-white glass-section">
             <div class="container">
                 <!-- Site Logo Section -->
                 <div class="site-logo text-center mb-4">

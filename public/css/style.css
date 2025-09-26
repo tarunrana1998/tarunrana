@@ -5,26 +5,61 @@
     max-width: 100%;
     overflow-x: hidden;
   }
+  
+  /* Dark Glassmorphism Variables */
+:root {
+    --glass-bg: rgba(30, 34, 45, 0.35);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+    --glass-blur: blur(18px);
+    --accent-color: #4f8cff;
+    --accent-gradient: linear-gradient(135deg, #4f8cff 0%, #a084ee 100%);
+    --text-color: #e6e6e6;
+    --heading-color: #fff;
+    --card-bg: rgba(40, 44, 60, 0.55);
+}
+
+body {
+    background: linear-gradient(120deg, #181c24 0%, #23283b 100%);
+    min-height: 100vh;
+    color: var(--text-color);
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.glass, .navbar, .service-card, .project-card, .cert-card, .edu-card, .timeline-item {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-radius: 1rem;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    color: var(--text-color);
+    transition: all 0.3s cubic-bezier(.4,2,.3,1);
+}
+
 .navbar {
-    backdrop-filter: blur(10px); /* glass effect */
-    background: rgba(255, 255, 255, 0.9);
-    transition: all 0.3s ease;
+    background: var(--glass-bg);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .nav-link {
     position: relative;
+    color: var(--text-color);
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #0d6efd; /* Bootstrap Primary */
+    color: var(--accent-color);
 }
 
 .nav-link::after {
     content: "";
     width: 0;
     height: 2px;
-    background: #0d6efd;
+    background: var(--accent-color);
     position: absolute;
     left: 0;
     bottom: 0;
@@ -33,6 +68,30 @@
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+}
+
+a {
+    color: var(--accent-color);
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #a084ee;
+}
+
+/* Section glass backgrounds */
+.timeline-area, .education-area, .services-area {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-radius: 1rem;
+    box-shadow: var(--glass-shadow);
+    border: 1px solid var(--glass-border);
+    margin-bottom: 2rem;
 }
 
 /* Start - Top section */
@@ -215,17 +274,9 @@
 }
 
 .progress-bar.bg-primary {
-    background: linear-gradient(90deg, #0d6efd 0%, #3d8bfd 100%);
-    box-shadow: 0 0 8px #0d6efd;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #0d6efd, #6610f2);
-    border: none;
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, #6610f2, #0d6efd);
+    background: linear-gradient(90deg, #4f8cff 0%, #a084ee 100%);
+    box-shadow: 0 0 8px #4f8cff;
+    color: #fff;
 }
 
 /*certification start*/

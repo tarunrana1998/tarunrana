@@ -7,17 +7,16 @@
     <style>
        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  --color: rgba(30, 30, 30);
-  --bgColor: rgba(245, 245, 245);
+  --color: #e6e6e6;
+  --bgColor: rgba(24,28,36,0.95);
+  background: linear-gradient(120deg, #181c24 0%, #23283b 100%);
   min-height: 100vh;
   display: grid;
   align-content: center;
@@ -25,11 +24,12 @@ body {
   padding: 2rem;
   font-family: "Poppins", sans-serif;
   color: var(--color);
-  background: var(--bgColor);
 }
 
 h1 {
   text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 16px #0008;
 }
 
 ul {
@@ -45,23 +45,18 @@ ul {
   margin-inline: auto;
 }
 
-/* line */
 ul::before {
   content: "";
   grid-column: 1;
   grid-row: 1 / span 20;
-  background: rgb(225, 225, 225);
+  background: rgba(79,140,255,0.18);
   border-radius: calc(var(--line-w) / 2);
 }
 
-/* columns*/
-
-/* row gaps */
 ul li:not(:last-child) {
   margin-bottom: var(--row-gap);
 }
 
-/* card */
 ul li {
   grid-column: 2;
   --inlineP: 1.5rem;
@@ -69,29 +64,31 @@ ul li {
   grid-row: span 2;
   display: grid;
   grid-template-rows: min-content min-content min-content;
+  background: rgba(40,44,60,0.55);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  color: #e6e6e6;
 }
 
-/* date */
 ul li .date {
   --dateH: 3rem;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
-
   text-align: center;
   background-color: var(--accent-color);
-
   color: white;
   font-size: 1.25rem;
   font-weight: 700;
-
   display: grid;
   place-content: center;
   position: relative;
-
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+  box-shadow: 0 2px 12px #0006;
 }
 
-/* date flap */
 ul li .date::before {
   content: "";
   width: var(--inlineP);
@@ -100,32 +97,30 @@ ul li .date::before {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
   position: absolute;
   top: 100%;
-
   clip-path: polygon(0 0, 100% 0, 0 100%);
   right: 0;
 }
 
-/* circle */
 ul li .date::after {
   content: "";
   position: absolute;
   width: 2rem;
   aspect-ratio: 1;
-  background: var(--bgColor);
+  background: #23283b;
   border: 0.3rem solid var(--accent-color);
   border-radius: 50%;
   top: 50%;
-
   transform: translate(50%, -50%);
   right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  box-shadow: 0 2px 8px #0006;
 }
 
-/* title descr */
 ul li .title,
 ul li .descr {
-  background: var(--bgColor);
+  background: transparent;
   position: relative;
   padding-inline: 1.5rem;
+  color: #e6e6e6;
 }
 ul li .title {
   overflow: hidden;
@@ -138,14 +133,13 @@ ul li .descr {
   font-weight: 300;
 }
 
-/* shadows */
 ul li .title::before,
 ul li .descr::before {
   content: "";
   position: absolute;
   width: 90%;
   height: 0.5rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(79,140,255,0.18);
   left: 50%;
   border-radius: 50%;
   filter: blur(4px);
@@ -154,7 +148,6 @@ ul li .descr::before {
 ul li .title::before {
   bottom: calc(100% + 0.125rem);
 }
-
 ul li .descr::before {
   z-index: -1;
   bottom: 0.25rem;
@@ -173,17 +166,13 @@ ul li .descr::before {
   ul li:nth-child(even) {
     grid-column: 3;
   }
-
-  /* start second card */
   ul li:nth-child(2) {
     grid-row: 2/4;
   }
-
   ul li:nth-child(odd) .date::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     left: 0;
   }
-
   ul li:nth-child(odd) .date::after {
     transform: translate(-50%, -50%);
     left: calc(100% + var(--col-gap) + var(--line-w) / 2);
@@ -198,10 +187,9 @@ ul li .descr::before {
   text-align: right;
 }
 .credits a {
-  color: var(--color);
+  color: #a084ee;
 }
 
-       
     </style>
 </head>
 <body>
