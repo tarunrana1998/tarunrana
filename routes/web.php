@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HireMeController;
 
 // Route::domain('{account}.tarunrana.com')->group(function () {
 //     Route::get('/', function (string $account) {
@@ -87,6 +88,5 @@ Route::get('/', function () {
     return view('welcome',compact('projects','certifications'));
 });
 
-Route::get('/test1', function () {
-    return view('test1');
-});
+
+Route::post('/hire-me', [HireMeController::class, 'store'])->name('hire-me.store');

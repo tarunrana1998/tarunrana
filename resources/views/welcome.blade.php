@@ -139,9 +139,10 @@
             </nav>
         </header>
 
-
-
-
+        <!-- Highlight Banner -->
+        <div class="timeline-highlight">
+            🚀 <b>Accepting:</b> Full Time (CTC &gt; 20 Lakhs) &nbsp;|&nbsp; Freelance ₹800/hour
+        </div>
 
         <section id="home" class="site-banner py-5 d-flex align-items-center">
             <div class="container">
@@ -554,88 +555,7 @@
 
         </section>
 
-        <section id="hire-me" class="py-5 glass-section min-vh-100 d-flex align-items-center">
-            <div class="container glass p-4">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold text-primary">Hire Me</h2>
-                    <p class="lead text-muted">Interested in working together? Submit your offer below for a full-time or part-time position!</p>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <form action="#" method="POST" class="p-4 rounded-4 shadow glass-section">
-                            <div class="mb-3">
-                                <label for="company" class="form-label">Company Name</label>
-                                <input type="text" class="form-control" id="company" name="company" placeholder="Enter your company name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="location" class="form-label">Company Location</label>
-                                <input type="text" class="form-control" id="location" name="location" placeholder="Enter company location" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="quote" class="form-label">Quote Price (in USD)</label>
-                                <input type="number" class="form-control" id="quote" name="quote" placeholder="Enter your offer price" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Position Type</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="position_type" id="fulltime" value="Full Time" required>
-                                    <label class="form-check-label" for="fulltime">Full Time</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="position_type" id="parttime" value="Part Time" required>
-                                    <label class="form-check-label" for="parttime">Part Time</label>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Additional Message (optional)</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Add any details or questions..."></textarea>
-                            </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-lg rounded-pill">Send Offer</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        {{-- <section id="contact" class="py-5 bg-light">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold">Contact Me</h2>
-                    <p class="text-muted">Got a project idea, a job offer, or just want to say hi? Feel free to reach
-                        out!</p>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Your Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Your Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-                            </div>
-
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-
+        @include('components.hire_me')
 
         <footer id="contact" class="footer-area bg-dark text-white glass-section">
             <div class="container">

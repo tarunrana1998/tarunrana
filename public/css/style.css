@@ -5,7 +5,7 @@
     max-width: 100%;
     overflow-x: hidden;
   }
-  
+
   /* Dark Glassmorphism Variables */
 :root {
     --glass-bg: rgba(30, 34, 45, 0.35);
@@ -361,4 +361,54 @@ a:hover {
         left: 8px;
         transform: none;
     }
+}
+
+/* Animated Highlight Banner */
+.timeline-highlight {
+    background: linear-gradient(90deg, #4f8cff 0%, #a084ee 100%);
+    color: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 32px 0 rgba(79,140,255,0.25);
+    padding: 2rem 2.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInDown 1s;
+}
+.timeline-highlight::after {
+    content: "💼";
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    font-size: 2.5rem;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Fade-in utility for cards */
+.animated-fadein {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: cardFadeIn 0.8s forwards;
+}
+@keyframes cardFadeIn {
+    to { opacity: 1; transform: none;}
+}
+
+/* Card hover effect utility */
+.animated-card-hover:hover {
+    box-shadow: 0 12px 36px 0 rgba(79,140,255,0.18);
+    transform: scale(1.025) translateY(-2px);
+    transition: all 0.3s cubic-bezier(.4,2,.3,1);
+    border: 1.5px solid var(--accent-color);
 }

@@ -7,6 +7,14 @@
     <style>
        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
+:root {
+  --color: #e6e6e6;
+  --bgColor: rgba(24,28,36,0.95);
+  --accent-color: #4f8cff;
+  --highlight-bg: linear-gradient(90deg, #4f8cff 0%, #a084ee 100%);
+  --highlight-shadow: 0 8px 32px 0 rgba(79,140,255,0.25);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +22,6 @@
 }
 
 body {
-  --color: #e6e6e6;
-  --bgColor: rgba(24,28,36,0.95);
   background: linear-gradient(120deg, #181c24 0%, #23283b 100%);
   min-height: 100vh;
   display: grid;
@@ -30,6 +36,38 @@ h1 {
   text-align: center;
   color: #fff;
   text-shadow: 0 2px 16px #0008;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-highlight {
+  background: var(--highlight-bg);
+  color: #fff;
+  border-radius: 1.2rem;
+  box-shadow: var(--highlight-shadow);
+  padding: 2rem 2.5rem;
+  margin: 0 auto 2rem auto;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInDown 1s;
+}
+.timeline-highlight::after {
+  content: "💼";
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  font-size: 2.5rem;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px);}
+  to { opacity: 1; transform: translateY(0);}
 }
 
 ul {
@@ -43,6 +81,12 @@ ul {
   list-style: none;
   width: min(60rem, 90%);
   margin-inline: auto;
+  animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
 }
 
 ul::before {
@@ -71,6 +115,25 @@ ul li {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   color: #e6e6e6;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardFadeIn 0.8s forwards;
+}
+ul li:nth-child(1) { animation-delay: 0.1s;}
+ul li:nth-child(2) { animation-delay: 0.2s;}
+ul li:nth-child(3) { animation-delay: 0.3s;}
+ul li:nth-child(4) { animation-delay: 0.4s;}
+ul li:nth-child(5) { animation-delay: 0.5s;}
+
+@keyframes cardFadeIn {
+  to { opacity: 1; transform: none;}
+}
+
+ul li:hover {
+  box-shadow: 0 12px 36px 0 rgba(79,140,255,0.18);
+  transform: scale(1.025) translateY(-2px);
+  transition: all 0.3s cubic-bezier(.4,2,.3,1);
+  border: 1.5px solid var(--accent-color);
 }
 
 ul li .date {
@@ -87,6 +150,7 @@ ul li .date {
   position: relative;
   border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
   box-shadow: 0 2px 12px #0006;
+  letter-spacing: 0.02em;
 }
 
 ul li .date::before {
@@ -127,10 +191,14 @@ ul li .title {
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
   font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
 }
 ul li .descr {
   padding-block-end: 1.5rem;
   font-weight: 300;
+  font-size: 1rem;
+  color: #bfc9e0;
 }
 
 ul li .title::before,
@@ -188,37 +256,45 @@ ul li .descr::before {
 }
 .credits a {
   color: #a084ee;
+  text-decoration: none;
+  transition: color 0.2s;
 }
-
+.credits a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
     </style>
 </head>
 <body>
-<h1>UL timeline cards</h1>
+<h1>Timeline & Activities</h1>
+<div class="timeline-highlight">
+    <span>🚀 <b>Accepting:</b> Full Time (CTC &gt; 20 Lakhs) &nbsp;|&nbsp; Freelance ₹800/hour</span>
+</div>
 <ul>
     <li style="--accent-color:#41516C">
         <div class="date">2002</div>
-        <div class="title">Title 1</div>
-        <div class="descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
+        <div class="title">Started Schooling</div>
+        <div class="descr">Began my academic journey, building a strong foundation in science and mathematics.</div>
     </li>
     <li style="--accent-color:#FBCA3E">
         <div class="date">2007</div>
-        <div class="title">Title 2</div>
-        <div class="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>
+        <div class="title">First Computer</div>
+        <div class="descr">Got my first computer, sparking a lifelong passion for technology and coding.</div>
     </li>
     <li style="--accent-color:#E24A68">
         <div class="date">2012</div>
-        <div class="title">Title 3</div>
-        <div class="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.</div>
+        <div class="title">Early Coding</div>
+        <div class="descr">Started learning programming basics and web development, building small projects for fun.</div>
     </li>
     <li style="--accent-color:#1B5F8C">
         <div class="date">2017</div>
-        <div class="title">Title 4</div>
-        <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+        <div class="title">Engineering College</div>
+        <div class="descr">Joined B.Tech in Computer Science, deepened my skills in software engineering and development.</div>
     </li>
     <li style="--accent-color:#4CADAD">
         <div class="date">2022</div>
-        <div class="title">Title 5</div>
-        <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
+        <div class="title">Professional Growth</div>
+        <div class="descr">Working as a Software Engineer, delivering scalable solutions and leading impactful projects.</div>
     </li>
 </ul>
 <div class="credits"><a target="_blank" href="https://www.freepik.com/free-vector/infographic-template-with-yearly-info_1252895.htm">inspired by</a></div>
