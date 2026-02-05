@@ -12,7 +12,7 @@ class HireMeController extends Controller
             'company' => 'required|string|max:255',
             'location' => 'required|string|max:255',
             'quote' => 'required|numeric|min:0',
-            'position_type' => 'required|in:Full Time,Part Time',
+            'position_type' => 'required|in:Full Time,Part Time,Contract',
             'message' => 'nullable|string|max:2000',
         ]);
 

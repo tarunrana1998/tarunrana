@@ -1,79 +1,79 @@
-<section id="hire-me" class="py-5 glass-section min-vh-100 d-flex align-items-center">
-            <div class="container glass p-4">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold text-primary">Hire Me (India & Worldwide) 🌏🇮🇳</h2>
-                    <p class="lead text-muted">
-                        Excited to collaborate with clients from India and around the globe! Whether you're a startup, established company, or an individual, let's work together to build something impactful.<br>
-                        Submit your offer below for a full-time, part-time, or contract position.
-                    </p>
-                    <p class="text-secondary small">
-                        <strong>Note:</strong> Preferred currency is Indian Rupees (INR), but international offers in other currencies are also welcome. Open to remote, hybrid, and onsite opportunities worldwide!
-                    </p>
+<section id="contact" class="py-20 section-border">
+    <div class="max-w-6xl mx-auto px-6" data-reveal>
+        <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
+            <div>
+                <x-section-header
+                    eyebrow="Contact"
+                    title="Let us build something resilient together."
+                    subtitle="Share the role, timeline, and scope. I respond with a clear plan, tradeoffs, and next steps."
+                />
+                <div class="space-y-4 text-muted">
+                    <p>Looking for a senior full-stack engineer who can own product delivery and architecture? This is my lane.</p>
+                    <p>Open to full-time and contract opportunities with teams that care about quality, performance, and velocity.</p>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <form action="{{ route('hire-me.store') }}" method="POST" class="p-4 rounded-4 shadow glass-section">
-                            @csrf
-                            @if(session('success'))
-                                <div class="alert alert-success">{{ session('success') }}</div>
-                            @endif
-                            @if($errors->any())
-                                <div class="alert alert-danger">
-                                    <ul class="mb-0">
-                                        @foreach($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            @endif
-                            <div class="mb-3">
-                                <label for="client_name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="client_name" name="client_name" placeholder="Enter your name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="client_email" class="form-label">Your Email</label>
-                                <input type="email" class="form-control" id="client_email" name="client_email" placeholder="Enter your email address" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="company" class="form-label">Company Name</label>
-                                <input type="text" class="form-control" id="company" name="company" placeholder="Eg: Infosys, TCS, Google, Your Startup..." required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="location" class="form-label">Company Location (City/State/Country)</label>
-                                <input type="text" class="form-control" id="location" name="location" placeholder="Eg: Bengaluru, Maharashtra, USA, Remote" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="quote" class="form-label">Quote Price (preferably in INR)</label>
-                                <input type="number" class="form-control" id="quote" name="quote" placeholder="Eg: 100000" required>
-                                <div class="form-text">Please enter your offer in Indian Rupees (₹) or specify your currency in the message below.</div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Position Type</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="position_type" id="fulltime" value="Full Time" required>
-                                    <label class="form-check-label" for="fulltime">Full Time</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="position_type" id="parttime" value="Part Time" required>
-                                    <label class="form-check-label" for="parttime">Part Time</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="position_type" id="contract" value="Contract/Freelance">
-                                    <label class="form-check-label" for="contract">Contract / Freelance</label>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Additional Message (optional)</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Share your project details, expectations, currency if not INR, or any questions..."></textarea>
-                            </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-lg rounded-pill">Send Offer 🚀</button>
-                            </div>
-                        </form>
-                        <div class="text-center mt-4 text-success fw-semibold">
-                            <span>Thank you for considering me! I look forward to working with you—whether you're in India or anywhere in the world.</span>
-                        </div>
-                    </div>
+                <div class="mt-8 grid gap-3 text-sm text-muted">
+                    <p>Email: <span class="text-accent">taruntech98@gmail.com</span></p>
+                    <p>Location: India (open to remote/global)</p>
+                    <p>Availability: Open to conversations now</p>
                 </div>
             </div>
-        </section>
+
+            <form action="{{ route('hire-me.store') }}" method="POST" class="card p-6 space-y-5">
+                @csrf
+                @if (session('success'))
+                    <div class="rounded-2xl border border-subtle bg-surface-2 p-4 text-sm">{{ session('success') }}</div>
+                @endif
+                @if ($errors->any())
+                    <div class="rounded-2xl border border-subtle bg-surface-2 p-4 text-sm">
+                        <p class="font-semibold mb-2">Please fix the following:</p>
+                        <div class="grid gap-1 text-muted">
+                            @foreach ($errors->all() as $error)
+                                <p>- {{ $error }}</p>
+                            @endforeach
+                        </div>
+                    </div>
+                @endif
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div class="space-y-2">
+                        <label for="client_name" class="text-sm font-semibold">Name</label>
+                        <input id="client_name" name="client_name" type="text" required class="input-field" placeholder="Your name">
+                    </div>
+                    <div class="space-y-2">
+                        <label for="client_email" class="text-sm font-semibold">Email</label>
+                        <input id="client_email" name="client_email" type="email" required class="input-field" placeholder="you@company.com">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label for="company" class="text-sm font-semibold">Company</label>
+                    <input id="company" name="company" type="text" required class="input-field" placeholder="Company or product">
+                </div>
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div class="space-y-2">
+                        <label for="location" class="text-sm font-semibold">Location</label>
+                        <input id="location" name="location" type="text" required class="input-field" placeholder="City, country, or remote">
+                    </div>
+                    <div class="space-y-2">
+                        <label for="quote" class="text-sm font-semibold">Budget / CTC</label>
+                        <input id="quote" name="quote" type="number" required class="input-field" placeholder="e.g. 2000000">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label for="position_type" class="text-sm font-semibold">Engagement</label>
+                    <select id="position_type" name="position_type" required class="input-field">
+                        <option value="Full Time">Full Time</option>
+                        <option value="Part Time">Part Time</option>
+                        <option value="Contract">Contract</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label for="message" class="text-sm font-semibold">What are you building?</label>
+                    <textarea id="message" name="message" rows="4" class="input-field" placeholder="Scope, timelines, current stack, and priorities..."></textarea>
+                </div>
+                <button type="submit" class="w-full rounded-xl btn-primary px-6 py-3 text-sm font-semibold">
+                    Send details
+                </button>
+                <p class="text-xs text-muted">Currency can be INR or USD. I will confirm details in the reply.</p>
+            </form>
+        </div>
+    </div>
+</section>
