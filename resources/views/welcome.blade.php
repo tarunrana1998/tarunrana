@@ -100,12 +100,11 @@
                 <div class="space-y-8" data-reveal>
                     <span class="badge-soft">Senior full-stack engineer</span>
                     <h1 class="text-4xl md:text-6xl font-display font-semibold leading-tight">
-                        I build <span class="accent-gradient">search-driven</span> products and scalable platforms
+                        I build <span class="accent-gradient">scalable</span> platforms and modernize web applications
                         that feel fast, intentional, and trustworthy.
                     </h1>
                     <p class="text-muted text-lg max-w-2xl">
-                        5+ years of end-to-end experience across frontend, backend, and data systems. I ship clean architecture,
-                        performance-first experiences, and developer tooling that teams can grow on.
+                        Senior Software Engineer with 5+ years of experience in modernizing and scaling web applications using PHP, Laravel, MySQL, and JavaScript. I leverage AI-assisted development tools to drive productivity and code quality.
                     </p>
                     <div class="flex flex-wrap gap-3">
                         <a href="#projects" class="rounded-full px-6 py-3 text-sm font-semibold btn-primary">View case studies</a>
@@ -113,10 +112,10 @@
                     </div>
                     <div class="flex flex-wrap gap-2 text-sm text-muted">
                         <span class="chip">Laravel</span>
-                        <span class="chip">ElasticSearch</span>
-                        <span class="chip">Redis</span>
+                        <span class="chip">Modernization</span>
+                        <span class="chip">AI-Assisted Dev</span>
                         <span class="chip">MySQL</span>
-                        <span class="chip">Web Performance</span>
+                        <span class="chip">Scalability</span>
                     </div>
                 </div>
 
@@ -162,24 +161,17 @@
         <section id="about" class="py-20 section-border">
             <div class="max-w-6xl mx-auto px-6 grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
                 <div data-reveal>
-                    <x-section-header
-                        eyebrow="About"
-                        title="Engineering with clarity, speed, and calm execution."
-                        subtitle="I care about clean systems, measurable outcomes, and shipping work that holds up under scale."
-                    />
+                    <x-section-header eyebrow="About" title="Engineering with clarity, speed, and calm execution." subtitle="I care about clean systems, measurable outcomes, and shipping work that holds up under scale." />
                 </div>
                 <div class="space-y-5 text-muted text-lg" data-reveal>
                     <p>
-                        I design and build full-stack products that balance performance, reliability, and developer experience.
-                        My work spans search-driven marketplaces, subscription analytics, and real-time data platforms.
+                        I specialize in modernizing legacy systems and building scalable full-stack products. My work spans high-traffic platforms, API development, and database optimization.
                     </p>
                     <p>
-                        I bring an architecture-first mindset to frontend and backend work: thoughtful APIs, predictable data
-                        pipelines, and interfaces that feel premium without bloat.
+                        I bring an architecture-first mindset to upgrading core technologies (PHP, MySQL) and implementing AI-driven workflows to enhance development speed and code quality.
                     </p>
                     <p>
-                        When I join a project, I optimize for clarity: strong documentation, reusable systems, and decisions that
-                        scale with the team.
+                        When I join a project, I optimize for efficient execution: utilizing AI tools, writing clean documentation, and building reusable systems that scale with the team.
                     </p>
                 </div>
             </div>
@@ -187,11 +179,7 @@
 
         <section id="skills" class="py-20 section-border">
             <div class="max-w-6xl mx-auto px-6" data-reveal>
-                <x-section-header
-                    eyebrow="Skills"
-                    title="A full-stack toolkit, organized around outcomes."
-                    subtitle="Grouped by how I deliver value, not by buzzwords."
-                />
+                <x-section-header eyebrow="Skills" title="A full-stack toolkit, organized around outcomes." subtitle="Grouped by how I deliver value, not by buzzwords." />
                 <div class="grid gap-6 md:grid-cols-2">
                     @foreach ($skills as $group)
                         <x-skill-group :group="$group" />
@@ -202,11 +190,7 @@
 
         <section id="experience" class="py-20 section-border">
             <div class="max-w-6xl mx-auto px-6" data-reveal>
-                <x-section-header
-                    eyebrow="Experience"
-                    title="Built for production, trusted at scale."
-                    subtitle="Roles that demonstrate ownership across frontend, backend, and data operations."
-                />
+                <x-section-header eyebrow="Experience" title="Built for production, trusted at scale." subtitle="Roles that demonstrate ownership across frontend, backend, and data operations." />
                 <div class="mt-10 grid gap-6 border-l border-subtle pl-6">
                     @foreach ($experience as $entry)
                         <x-experience-card :entry="$entry" />
@@ -217,11 +201,7 @@
 
         <section id="projects" class="py-20 section-border">
             <div class="max-w-6xl mx-auto px-6" data-reveal>
-                <x-section-header
-                    eyebrow="Projects"
-                    title="Case studies with real impact and technical depth."
-                    subtitle="Problem, solution, architecture, and outcomes in a single view."
-                />
+                <x-section-header eyebrow="Projects" title="Case studies with real impact and technical depth." subtitle="Problem, solution, architecture, and outcomes in a single view." />
                 <div class="grid gap-8 lg:grid-cols-2">
                     @foreach ($projects as $project)
                         <x-project-card :project="$project" />
@@ -232,11 +212,7 @@
 
         <section id="writing" class="py-20 section-border">
             <div class="max-w-6xl mx-auto px-6" data-reveal>
-                <x-section-header
-                    eyebrow="Writing"
-                    title="Engineering notes, decisions, and playbooks."
-                    subtitle="Short essays on architecture, performance, and shipping product with high standards."
-                />
+                <x-section-header eyebrow="Writing" title="Engineering notes, decisions, and playbooks." subtitle="Short essays on architecture, performance, and shipping product with high standards." />
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     @foreach ($writings as $entry)
                         <x-writing-card :entry="$entry" />
@@ -247,15 +223,13 @@
 
         <section id="credentials" class="py-20 section-border">
             <div class="max-w-6xl mx-auto px-6" data-reveal>
-                <x-section-header
-                    eyebrow="Credentials"
-                    title="Proof of discipline and continuous learning."
-                    subtitle="Selected certifications that reflect my commitment to architecture and execution."
-                />
+                <x-section-header eyebrow="Credentials" title="Proof of discipline and continuous learning." subtitle="Selected certifications that reflect my commitment to architecture and execution." />
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                     @foreach ($certifications as $certification)
                         <div class="card p-5 flex flex-col">
-                            <img src="{{ asset($certification->image) }}" alt="{{ $certification->title }}" class="h-20 object-contain" loading="lazy">
+                            @if (!empty($certification->image))
+                                <img src="{{ asset($certification->image) }}" alt="{{ $certification->title }}" class="h-20 object-contain" loading="lazy">
+                            @endif
                             <h3 class="text-base font-display font-semibold mt-4">{{ $certification->title }}</h3>
                             <p class="text-muted text-sm mt-2">{{ $certification->description }}</p>
                         </div>

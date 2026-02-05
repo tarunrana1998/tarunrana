@@ -25,83 +25,83 @@ Route::get('/', function () {
         ],
         (object) [
             'label' => 'Specialty',
-            'value' => 'Search + data',
-            'detail' => 'ElasticSearch, crawling, and real-time indexing.',
+            'value' => 'Modernization',
+            'detail' => 'Legacy migration, API scaling, and AI integration.',
         ],
     ];
 
     $skills = [
         (object) [
-            'title' => 'Frontend Engineering',
-            'description' => 'Minimal, accessible, performance-first interfaces that scale cleanly.',
-            'items' => ['Responsive UI', 'Tailwind CSS', 'SCSS', 'JavaScript', 'Progressive enhancement', 'Core Web Vitals'],
+            'title' => 'Backend & Web Development',
+            'description' => 'Robust, scalable web applications using modern stacks.',
+            'items' => ['PHP', 'Laravel (LAMP)', 'jQuery', 'JavaScript', 'Node.js', 'React.js'],
         ],
         (object) [
-            'title' => 'Backend & APIs',
-            'description' => 'Clean architecture with pragmatic, production-hardened Laravel services.',
-            'items' => ['Laravel', 'PHP 8', 'REST APIs', 'Authentication', 'Queueing', 'Caching'],
+            'title' => 'Databases & Caching',
+            'description' => 'High-performance data storage and retrieval systems.',
+            'items' => ['MongoDB', 'MySQL', 'ElasticSearch', 'Redis'],
         ],
         (object) [
-            'title' => 'Data, Search, Scale',
-            'description' => 'Search relevance, data ingestion, and indexing at high volume.',
-            'items' => ['ElasticSearch', 'Redis', 'MySQL', 'Web scraping', 'ETL workflows', 'Monitoring'],
+            'title' => 'APIs & Integrations',
+            'description' => 'Seamless data exchange and third-party service integration.',
+            'items' => ['REST', 'JSON', 'OAuth', 'Third-party APIs'],
         ],
         (object) [
-            'title' => 'Infra & DX',
-            'description' => 'Reliable deployments and developer experience that stays frictionless.',
-            'items' => ['Linux', 'AWS', 'CI/CD', 'Git', 'Observability', 'Documentation'],
+            'title' => 'Servers, DevOps & AI',
+            'description' => 'Infrastructure management and AI-assisted workflows.',
+            'items' => ['Linux', 'AWS (EC2, S3)', 'CI/CD', 'Gemini', 'ChatGPT', 'GitHub Copilot'],
         ],
     ];
 
     $experience = [
         (object) [
-            'role' => 'Software Engineer',
-            'company' => '91Digitals / 91mobiles',
-            'period' => 'July 2022 - Present',
-            'summary' => 'Own search, crawling, and product performance initiatives across high-traffic platforms.',
+            'role' => 'Senior Software Engineer',
+            'company' => '91mobiles',
+            'period' => 'Jul \'22 — Present',
+            'summary' => 'Leading full-stack development of high-traffic, SEO-driven microservices platforms.',
             'highlights' => [
-                'Built and tuned ElasticSearch pipelines for large catalog search relevance.',
-                'Improved crawler reliability with resilient retries and tighter data QA.',
-                'Partnered with product on SEO and page-speed optimizations that improved discoverability.',
+                'Executed production modernization: Core PHP to Laravel, and PHP/MySQL upgrades.',
+                'Optimized REST APIs and Core Web Vitals using Redis, Elasticsearch, and AI tools.',
+                'Enhanced system security, maintainability, and performance at scale.',
             ],
-            'stack' => ['Laravel', 'ElasticSearch', 'Redis', 'MySQL', 'Linux'],
+            'stack' => ['Laravel', 'PHP', 'MySQL', 'Elasticsearch', 'Redis', 'React', 'jQuery'],
         ],
         (object) [
             'role' => 'Software Developer',
             'company' => 'Bytesview Analytics',
-            'period' => 'August 2021 - June 2022',
-            'summary' => 'Delivered full-stack features, payment flows, and analytics dashboards.',
+            'period' => 'Jan \'21 — Jul \'22',
+            'summary' => 'Built and scaled SaaS products delivering data-intensive dashboards.',
             'highlights' => [
-                'Shipped subscription billing flows with Stripe and secure role-based dashboards.',
-                'Migrated core API integrations to reduce operational complexity.',
-                'Built reusable UI components aligned with design handoff.',
+                'Indexed 150M+ records into Elasticsearch and integrated Twitter API v2.',
+                'Implemented Stripe payment gateways for secure, real-time transactions.',
+                'Delivered pixel-perfect UIs and optimized backend workflows.',
             ],
-            'stack' => ['Laravel', 'Stripe', 'MySQL', 'JavaScript', 'SCSS'],
-        ],
-        (object) [
-            'role' => 'Software Engineering Intern',
-            'company' => 'Bytesview Analytics',
-            'period' => 'January 2021 - July 2021',
-            'summary' => 'Contributed to frontend features and backend services while ramping into production systems.',
-            'highlights' => [
-                'Implemented UI enhancements with careful attention to performance.',
-                'Built backend modules in PHP/Laravel supporting live customer traffic.',
-                'Learned production observability practices and release workflows.',
-            ],
-            'stack' => ['Laravel', 'PHP', 'MySQL', 'JavaScript'],
+            'stack' => ['Laravel', 'PHP', 'MySQL', 'Elasticsearch', 'JavaScript', 'Highcharts'],
         ],
     ];
 
     $projects = [
         (object) [
-            'title' => 'MySmartPrice',
-            'tagline' => 'Search + price intelligence at scale.',
-            'role' => 'Full-stack engineer',
-            'problem' => 'Legacy PHP stack could not keep up with real-time product data and SEO demands.',
-            'solution' => 'Migrated to Laravel, built resilient crawlers, and introduced ElasticSearch with Redis caching.',
-            'outcome' => 'Faster search experiences, stable indexing, and improved Core Web Vitals.',
-            'decisions' => ['ElasticSearch for high-cardinality queries', 'Redis for hot-path caching', 'Queue-based crawlers with retries'],
-            'tech' => ['Laravel', 'ElasticSearch', 'Redis', 'MySQL', 'SEO'],
+            'title' => 'Ottcinematv',
+            'tagline' => 'Content-driven OTT platform.',
+            'role' => 'Lead Developer',
+            'problem' => 'Need for scalable content ingestion and intelligent metadata processing.',
+            'solution' => 'Automated CI/CD, Gemini AI for metadata, queue-based processing.',
+            'outcome' => 'Robust backend with single-click ingestion and real-time content management.',
+            'decisions' => ['Gemini AI integration', 'Automated CI/CD', 'Queues and Jobs'],
+            'tech' => ['Laravel', 'Gemini AI', 'SQL', 'CI/CD'],
+            'image' => asset('images/projects/ott_cinema.png'),
+            'link' => 'https://www.ottcinematv.com',
+        ],
+        (object) [
+            'title' => 'MySmartPrice, 91mobiles',
+            'tagline' => 'High-traffic price comparison platform.',
+            'role' => 'Senior Engineer',
+            'problem' => 'Legacy system scalability and performance issues.',
+            'solution' => 'Migrated UI to Laravel, implemented real-time tracking and caching.',
+            'outcome' => 'Improved search rankings, faster load times, and maintainability.',
+            'decisions' => ['Core PHP to Laravel', 'Real-time tracking', 'SEO Optimization'],
+            'tech' => ['Laravel', 'Redis', 'Mobile-First', 'SEO'],
             'image' => asset('images/projects/mysmartprice.png'),
             'link' => '#',
         ],
@@ -112,22 +112,10 @@ Route::get('/', function () {
             'problem' => 'API migration and billing upgrades were blocking product scale.',
             'solution' => 'Migrated to Twitter API v2, redesigned flows, and integrated Stripe billing.',
             'outcome' => 'Modernized data ingestion and enabled recurring revenue at scale.',
-            'decisions' => ['Token-aware API orchestration', 'Stripe webhooks for billing events', 'Modular dashboard UI'],
+            'decisions' => ['Twitter API v2', 'Stripe Integration', 'Responsive Dashboard'],
             'tech' => ['Laravel', 'Twitter API v2', 'Stripe', 'JavaScript'],
             'image' => asset('images/projects/trackmyhashtag.png'),
             'link' => 'https://www.trackmyhashtag.com',
-        ],
-        (object) [
-            'title' => 'FollowerSearch',
-            'tagline' => 'Search bios for 150M+ Twitter profiles.',
-            'role' => 'Backend + data engineer',
-            'problem' => 'MySQL full-text search was too slow for high-volume bios.',
-            'solution' => 'Moved search to ElasticSearch with optimized indexing and analytics dashboards.',
-            'outcome' => 'Responsive search experience and scalable analytics for power users.',
-            'decisions' => ['Bulk indexing strategy', 'Analytics with Highcharts', 'Stripe for subscriptions'],
-            'tech' => ['ElasticSearch', 'MySQL', 'Highcharts', 'Stripe'],
-            'image' => asset('images/projects/discontinued.jpg'),
-            'link' => 'https://www.followersearch.com',
         ],
         (object) [
             'title' => 'Newsdata.io',
@@ -168,7 +156,16 @@ Route::get('/', function () {
     ];
 
     $certifications = [
-
+        (object) [
+            'title' => 'B.TECH in Computer Science Engineering',
+            'image' => '', // No image
+            'description' => 'JSS Academy Of Technical Education (GPA: 7.8), Noida, India',
+        ],
+        (object) [
+            'title' => 'INTERMEDIATE-12TH in PCM',
+            'image' => '', // No image
+            'description' => "St. Mary's Convent Sr. Sec. School (GPA: 9), Gajraula, India",
+        ],
         (object) [
             'title' => 'Deloitte Australia - Technology Job Simulation',
             'image' => asset('images/certifications/deloitte_simulation.png'),
